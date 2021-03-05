@@ -1,13 +1,18 @@
-version: "2"
+version: "2.1"
 
 services:
   faunadb:
     image: fauna/faunadb
     container_name: faunadb
+    healthcheck:
+      test: ["CMD", "curl" ,"http://faunadb:8443/ping"]
+      interval: 1s
+      timeout: 3s
+      retries: 30
 
   tests:
     image: circleci/node:11.15
     container_name: mytests
     depends_on:
       - faunadb
-    command: bash -c 'curl http://faunadb:8443/ping'
+    command: "echo 'Tests OK'"
