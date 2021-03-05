@@ -2,11 +2,11 @@ version: "2"
 
 services:
   faunadb:
-    image: fauna-image
+    image: fauna/faunadb
     container_name: faunadb
 
   tests:
-    image: nodejs
+    image: circleci/node:11.15
     container_name: mytests
     depends_on:
       - faunadb
