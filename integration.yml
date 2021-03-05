@@ -10,4 +10,4 @@ services:
     container_name: mytests
     depends_on:
       - faunadb
-    command: bash -c 'while ! $(curl http://faunadb:8443/ping); do sleep 1; done'
+    command: bash -c 'curl http://faunadb:8443/ping'
