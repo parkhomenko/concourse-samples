@@ -1,0 +1,13 @@
+version: "2"
+
+services:
+  faunadb:
+    image: core
+    container_name: core
+
+  tests:
+    image: nodejs
+    container_name: mytests
+    depends_on:
+      - faunadb
+    command: "while ! $(curl --output /dev/null --silent --fail --max-time 1 http://core:8443/ping); do sleep 1; done"
