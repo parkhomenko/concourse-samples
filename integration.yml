@@ -2,12 +2,12 @@ version: "2"
 
 services:
   faunadb:
-    image: core
-    container_name: core
+    image: fauna-image
+    container_name: faunadb
 
   tests:
     image: nodejs
     container_name: mytests
     depends_on:
       - faunadb
-    command: "while ! $(curl --output /dev/null --silent --fail --max-time 1 http://core:8443/ping); do sleep 1; done"
+    command: "while ! $(curl --output /dev/null --silent --fail --max-time 1 http://faunadb:8443/ping); do sleep 1; done"
