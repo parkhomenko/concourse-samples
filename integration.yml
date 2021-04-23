@@ -16,13 +16,5 @@ services:
     depends_on:
       - faunadb
     volumes:
-      - type: volume
-        source: fauna-js-repository
-        target: /fauna-js
-        volume:
-          nocopy: true
-    command: "ls -la ./fauna-js"
-
-volumes:
-  fauna-js-repository:
-    driver: local
+      - "fauna-js-repository:/tmp/app"
+    command: "ls -la"
