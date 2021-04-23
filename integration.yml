@@ -17,4 +17,4 @@ services:
       - faunadb
     volumes:
       - ./fauna-js-repository:/app
-    command: "sh 'npm install'"
+    command: "npm install"
