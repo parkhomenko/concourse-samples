@@ -16,5 +16,6 @@ services:
     depends_on:
       - faunadb
     volumes:
-      - ./fauna-js-repository:/app
+      - ./fauna-js-repository:/fauna-js
+    working_dir: /fauna-js
     command: "npm install"
