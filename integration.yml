@@ -15,4 +15,6 @@ services:
     container_name: mytests
     depends_on:
       - faunadb
-    command: "echo 'Tests OK'"
+    volumes:
+      - ./fauna-js-repository:/app
+    command: "sh 'npm install'"
