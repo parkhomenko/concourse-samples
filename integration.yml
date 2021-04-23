@@ -21,7 +21,7 @@ services:
         target: /fauna-js
         volume:
           nocopy: true
-    command: "ls -la"
+    command: "cd fauna-js; ls -la"
 
 volumes:
   fauna-js-repository:
