@@ -22,7 +22,7 @@ services:
         volume:
           nocopy: false
     working_dir: /fauna-js
-    command: "npm install"
+    command: "ls -la"
 
 volumes:
   fauna-js-repository:
