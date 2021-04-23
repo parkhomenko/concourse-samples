@@ -18,4 +18,4 @@ services:
     volumes:
       - "../fauna-js-repository:/tmp/app"
     working_dir: "/tmp/app"
-    command: "npm install"
+    command: bash -c "npm install && npm test"
