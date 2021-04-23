@@ -16,8 +16,5 @@ services:
     depends_on:
       - faunadb
     volumes:
-      - "fauna-js-repository:/tmp/app"
+      - "./:/tmp/app"
     command: "ls -la /tmp/app"
-
-volumes:
-  fauna-js-repository:
