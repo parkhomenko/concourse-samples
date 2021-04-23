@@ -23,3 +23,6 @@ services:
           nocopy: false
     working_dir: /fauna-js
     command: "npm install"
+
+volumes:
+  fauna-js-repository:
