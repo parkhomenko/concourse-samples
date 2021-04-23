@@ -1,4 +1,4 @@
-version: "3.4"
+version: "3.9"
 
 services:
   faunadb:
@@ -20,8 +20,7 @@ services:
         source: fauna-js-repository
         target: /fauna-js
         volume:
-          nocopy: false
-    working_dir: /fauna-js
+          nocopy: true
     command: "ls -la"
 
 volumes:
