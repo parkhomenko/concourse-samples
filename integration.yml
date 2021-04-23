@@ -17,7 +17,7 @@ services:
       - faunadb
     volumes:
       - "fauna-js-repository:/tmp/app"
-    command: "ls -la /tmp"
+    command: "ls -la /tmp/app"
 
 volumes:
   fauna-js-repository:
