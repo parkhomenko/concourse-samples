@@ -22,7 +22,7 @@ services:
         volume:
           nocopy: false
     working_dir: /fauna-js
-    command: "ls -la"
+    command: "pwd"
 
 volumes:
   fauna-js-repository:
