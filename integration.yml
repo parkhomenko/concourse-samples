@@ -17,12 +17,12 @@ services:
       - faunadb
     volumes:
       - type: volume
-        source: ./fauna-js-repository
+        source: fauna-js-repository
         target: /fauna-js
         volume:
           nocopy: false
     working_dir: /fauna-js
-    command: "pwd"
+    command: "ls -la"
 
 volumes:
   fauna-js-repository:
