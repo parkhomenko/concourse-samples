@@ -16,8 +16,10 @@ services:
     depends_on:
       - faunadb
     volumes:
-      - type: bind
+      - type: volume
         source: ./fauna-js-repository
         target: /fauna-js
+        volume:
+          nocopy: false
     working_dir: /fauna-js
     command: "npm install"
