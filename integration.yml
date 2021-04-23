@@ -1,4 +1,4 @@
-version: "2.1"
+version: "3.4"
 
 services:
   faunadb:
@@ -16,6 +16,8 @@ services:
     depends_on:
       - faunadb
     volumes:
-      - ./fauna-js-repository:/fauna-js
+      - type: bind
+        source: ./fauna-js-repository
+        target: /fauna-js
     working_dir: /fauna-js
     command: "npm install"
