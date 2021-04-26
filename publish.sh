@@ -1,3 +1,5 @@
 #!/bin/sh
 
-echo "Hello World"
+mkdir dist
+npm run browserify
+npm run browserify-min
