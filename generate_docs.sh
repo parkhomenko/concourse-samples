@@ -11,5 +11,4 @@ cp ./fauna-js-repository/doc/* ./doc/
 
 ls -la ./doc
 
-mkdir docs_version
-echo PACKAGE_VERSION > ./docs_version/version.dat
+echo $PACKAGE_VERSION > ./docs_version/version.dat
