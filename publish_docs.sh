@@ -9,5 +9,8 @@ cd fauna-js-repository-updated-docs
 rm -rf *
 cp -R ../doc/* ./
 
+git config --global user.email "nobody@concourse-ci.org"
+git config --global user.name "Concourse"
+
 git add -A
 git commit -m "Update docs to version: $DOCS_VERSION"
