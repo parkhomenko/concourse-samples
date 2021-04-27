@@ -11,3 +11,11 @@ PACKAGE_VERSION=$(node -p -e "require('./package.json').version")
 NPM_LATEST_VERSION=$(npm view faunadb version)
 echo "Current package version: $PACKAGE_VERSION"
 echo "Latest version in npm: $NPM_LATEST_VERSION"
+
+if [ $PACKAGE_VERSION -gt $NPM_LATEST_VERSION ]
+then
+  echo "publish a new version"
+else
+  echo "NPM package already published on npm with version ${NPM_LATEST_VERSION}" 1>&2
+  exit 1
+fi
