@@ -15,7 +15,7 @@ NPM_LATEST_VERSION=4.1.0
 echo "Current package version: $PACKAGE_VERSION"
 echo "Latest version in npm: $NPM_LATEST_VERSION"
 
-if [ $PACKAGE_VERSION -gt $NPM_LATEST_VERSION ]
+if [ "$PACKAGE_VERSION" \> "$NPM_LATEST_VERSION" ]
 then
   echo "Publishing a new version..."
   echo '//registry.npmjs.org/:_authToken=$NPM_TOKEN' > .npmrc
