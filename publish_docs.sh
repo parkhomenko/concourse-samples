@@ -2,14 +2,14 @@
 
 ls -la ./doc
 
-git clone fauna-js-repository-docs fauna-js-repository-updated-docs
-cd fauna-js-repository-updated-docs
-echo "In original repo"
-ls
-rm -rf *
-echo "After removal of all the files"
-ls
-cp ../doc/* ./
-echo "After copy of new files"
-ls
-git status
+DOCS_VERSION=$(cat ./docs_version/version.dat)
+echo $DOCS_VERSION
+
+# git clone fauna-js-repository-docs fauna-js-repository-updated-docs
+
+# cd fauna-js-repository-updated-docs
+# rm -rf *
+# cp ../doc/* ./
+
+# git add -A
+# git commit -m "Update docs to version: $DOCS_VERSION"
